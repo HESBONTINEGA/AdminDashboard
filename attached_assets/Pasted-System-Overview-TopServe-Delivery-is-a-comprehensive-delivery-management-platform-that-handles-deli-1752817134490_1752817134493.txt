@@ -1,0 +1,32 @@
+System Overview
+TopServe Delivery is a comprehensive delivery management platform that handles delivery and pickup services for TopServe Ltd, a cake baking ingredients supplier. (www.topserveltd.co.ke). The system manages the complete delivery workflow from order intake to final delivery, while providing workforce management capabilities for the delivery business.
+Business Context:
+Primary Business - TopServe Ltd supplies cake baking ingredients through their e-commerce website
+Delivery Service - TopServeDelivery handles all delivery and pickup operations separately
+Current Integration - Customers order via website, WhatsApp, or phone; delivery is managed independently
+Future Vision - Full integration with the e-commerce platform for seamless order-to-delivery workflow
+How It Works:
+Order Intake - Customers place orders through TopServe website, WhatsApp, or phone calls. POS generates invoice/receipt numbers. 
+Delivery Assignment - TopServeDelivery staff convert orders into delivery tasks
+Agent Assignment - Delivery tasks are assigned to agents based on location and availability
+Customer Tracking - Customers receive login credentials and track deliveries via mobile app
+Completion - Agents complete deliveries with photo verification and payment collection
+Technical Architecture:
+📱 Mobile Apps - React Native (Customers, Staff, Delivery Agents)
+💻 Admin Dashboard - React web application
+🔧 Backend - Laravel API with database management
+🎯 Current Focus - Improving agent app functionality, adding comprehensive staff and customer features
+Target Users:
+Delivery Agents - Field operatives handling pickups and deliveries
+Staff Members - Office personnel managing tasks, attendance, and operations
+Administrators - Management overseeing entire delivery operations
+Customers - End users tracking their baking ingredient deliveries
+Key Operational Features:
+Multi-Channel Integration - Handles orders from website, WhatsApp, and phone calls
+Delivery Tracking - Real-time GPS tracking with Invoice Number identification (KIM-XXX, ACCRA-XXX)
+Workforce Management - Complete staff attendance, leave, and performance tracking
+Payment Handling - COD with M-Pesa verification, prepaid order processing
+Quality Assurance - Mandatory delivery photos, OTP verification for high-value items
+Performance Monitoring - Turnaround time tracking (Walkin: 45-60 min, Rider: 60 min)
+Flexible Delivery Types - Door delivery, CBD walk-ins, internal warehouse transfers
+Scalable Operations - Outsourced agent management for peak demand periods

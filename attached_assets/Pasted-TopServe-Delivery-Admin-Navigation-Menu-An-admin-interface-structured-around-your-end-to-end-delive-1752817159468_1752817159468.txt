@@ -1,0 +1,127 @@
+TopServe Delivery Admin Navigation Menu
+An admin interface structured around your end-to-end delivery workflow, workforce management, customer support, and analytics. Each section provides in-page actions, filters, and tables rather than nested menu items for tasks like uploads or approvals.
+🔝 Top Navigation Bar
+Element
+Function
+TopServe Logo
+Home → Dashboard
+Global Search
+Search Orders (Invoice KIM-xxx / ACCRA-xxx), Customers, Agents, Staff
+➕ Quick Actions
+Create Delivery (single), Bulk Upload (CSV/PDF), Emergency Broadcast
+🗺️ Live Map
+Toggle full-screen real-time map view
+🏢 Branch Selector
+Dropdown to switch active branches (Shop A, Warehouse, etc.)
+🔔 Notifications
+Leave updates, overdue tasks, time alerts
+👤 Profile Menu
+My Profile, Account & Security, Integrations, Logout
+
+
+
+
+ Sidebar Navigation
+1. Dashboard
+Overview (default):
+View key metrics: Deliveries (total/completed/overdue), Active Agents, Attendance rates
+Dashboard cards (real-time):
+Active Agents (e.g. 12/15)
+Pending Deliveries (e.g. 8)
+Active Deliveries (e.g. 15)
+Overdue Deliveries (e.g. 2 🔴)
+KPIs & Timers: Turnaround (Walk‑in: 45–60 min; Rider: 60 min), agent performance snapshot
+Live Map: Real-time agent locations
+Outsourced: External delivery monitoring with manual close controls
+Performance: Daily/weekly/monthly charts and rankings,
+2. Deliveries
+A single deliveries table with columns:
+Invoice #
+Customer
+Type
+Status
+Assigned Agent
+Created At
+ETA Timer
+Payment
+Fee
+Actions
+
+Types: Door, Walk-in (Courier / Matatu / Office), Internal, Outsourced
+Statuses: Pending, Active, Completed, Overdue
+Filters: Date range, Agent, Type, Payment (COD/Paid)
+Actions: Assign, Reassign, View Map & Route Trace, Manual Close, Export, Bulk Upload (CSV)
+
+3. Agents
+A comprehensive delivery agent management section, capturing both operational roles and engagement status within a single directory table.
+Name
+Agent Type
+Agent Category
+Status
+Tasks Completed
+Rating
+Actions
+
+Agent Type: Rider or CBD Walk-in (field role)
+Agent Category: Internal (in-house) or Outsourced (third-party)
+Filters & Controls:
+Filter by Agent Type (Rider/CBD Walk-in)
+Filter by Agent Category (Internal/Outsourced)
+Search by Name or ID
+Tabs:
+Live Tracking: Map view with live GPS locations of selected agent groups
+Performance: Charts & rankings across types and categories, exportable
+Assignments: Current and historical tasks with reassign controls
+Actions : Bulk Import / Export CSV/PDF, Add Agent
+
+4. HR
+A dedicated human resources section with four focused menu items:
+Staff
+Directory table (Name, Role, Branch, Actions)
+Staff Bio Fields: Office Branch, Full Name, ID/Passport Number, Next-of-Kin Name & Contact (phone & address), CV/Resume, Basic Pay, Statutory Deductions, ID Copy (front & back), Marital Status, Dependents, Medical Conditions, Current Address
+Add Staff, Bulk Import, Department Filter, Export CSV/PDF
+Leave
+Leave requests list (Employee, Type, Dates, Status)
+Approve/Reject actions, Bulk approvals, Leave balance overview (view staff leave balances)
+Attendance
+Clock In/Out logs table (Employee, Date, Time, Location)
+GPS verification status, Attendance % metrics
+Track late check-ins / early check-outs
+View and export attendance logs
+In-page filtering by date, branch, employee
+Payroll
+Payslip management (Employee, Period, Status)
+Generate/Download Payslips, Statutory deductions overview
+Salary summary reports, Export CSV/PDF
+5. Customers
+Directory: Table | Name | Phone/Email | Reg. Date | Deliveries # | Actions |
+Support Tickets: Ticket queue, Status, Assign staff
+Delivery History: List of past orders with statuses and reviews
+Reviews: Ratings, Comments, Flag/Respond
+Actions: Add Customer , Export Customer List, Send Message
+
+6. Reports
+Organized by business function with common controls (Date Range, Branch, Export):
+Operational: Turnaround Time, Delivery Success, Order Status Summary
+HR Reports: Attendance Summaries, Leave Balances, Payroll Reports
+Exports: Export reports (CSV/PDF) for attendance, leave, deliveries
+7. Communications
+Centralized messaging and announcements:
+Push Notifications: Templates, Schedule, History table, Bulk Push, Push Broadcast
+SMS: Bulk send, Templates, Logs/history
+Email: Campaigns, logs/history
+8. Configuration
+System setup and master data:
+Users & Branches: Manage customers, agents, and staff branch assignments
+Branches & Teams
+Couriers & Delivery Types
+Notification Templates
+Delivery Zones & Hours
+Leave Types & Limits - Configure leave types & limits (e.g. 14 days annual, 7 sick days)
+
+⚙️ Profile & Settings Menu (under 👤)
+My Profile: Contact info, Next of Kin, ID docs
+Account & Security: Password,
+Company Settings: Business Hours, Delivery Limits, Photo/OTP Requirements
+System Logs & Maintenance: Data Export, Backups, Logs
+Logout
