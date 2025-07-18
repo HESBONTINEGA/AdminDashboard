@@ -6,9 +6,11 @@ import { Badge } from "@/components/ui/badge";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Search, Plus, Map, Bell, User, ChevronDown, Truck } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
+import LiveTrackingMap from "@/components/map/live-tracking-map";
 
 export default function TopNav() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [isMapOpen, setIsMapOpen] = useState(false);
   
   const { data: branches = [] } = useQuery({
     queryKey: ["/api/branches"],
@@ -60,7 +62,7 @@ export default function TopNav() {
           </DropdownMenu>
 
           {/* Live Map Toggle */}
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" onClick={() => setIsMapOpen(true)}>
             <Map className="h-4 w-4" />
           </Button>
 
@@ -105,6 +107,9 @@ export default function TopNav() {
           </DropdownMenu>
         </div>
       </div>
+      
+      {/* Live Tracking Map Component */}
+      <LiveTrackingMap isOpen={isMapOpen} onClose={() => setIsMapOpen(false)} />
     </header>
   );
 }

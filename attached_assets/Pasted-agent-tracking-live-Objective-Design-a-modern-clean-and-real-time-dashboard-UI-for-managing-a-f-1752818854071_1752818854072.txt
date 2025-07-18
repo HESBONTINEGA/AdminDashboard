@@ -1,0 +1,131 @@
+agent tracking (live)
+Objective: Design a modern, clean, and real-time dashboard UI for managing a fleet of delivery agents. The interface should provide at-a-glance information through a map and a detailed side panel, with clear status indicators and filtering capabilities.
+
+1. Overall Layout & Structure
+Type: Full-screen web application dashboard.
+
+Main Components:
+
+A persistent Header at the top.
+
+A main content area divided into two vertical sections:
+
+A Collapsible Side Panel on the left (approx. 380px wide).
+
+A Main Map View on the right, occupying the remaining space.
+
+2. Header Component
+The header is a clean, single-row element with three distinct sections:
+
+Left Section (Branding & Title):
+
+Display the "TopServe Ltd" company logo.
+
+Next to the logo, show the application title: "Delivery Operations" in a large, bold font.
+
+Center Section (Agent Filter):
+
+A three-segment button group for filtering agents.
+
+Buttons are labeled: "All Agents", "On Delivery", and "Available".
+
+The active filter should have a distinct style (e.g., white background, blue text, subtle shadow). Inactive buttons should have a muted style (e.g., gray background, gray text).
+
+Right Section (Status Indicator):
+
+A "Live" status indicator.
+
+This consists of a small, pulsing green circle followed by the word "Live" in green text.
+
+3. Collapsible Side Panel
+This panel lists the agents currently displayed on the map.
+
+Functionality: The entire panel must be collapsible.
+
+When expanded, it should show a "Collapse" icon (a left-pointing chevron/caret) in its top-right corner.
+
+When collapsed, the panel should have zero width, and an "Expand" icon (a right-pointing chevron/caret) should appear on the left edge of the map view.
+
+Content:
+
+Header: A title reading "Agents in View".
+
+List: A vertically scrollable list of "Agent Cards".
+
+4. Agent Card Component (for Side Panel)
+Each card represents one agent and summarizes their status.
+
+Style: A rectangular card with rounded corners, a light background (white), and a subtle shadow.
+
+Structure:
+
+Top Row:
+
+Left: The agent's full name in a bold, medium font (e.g., "Maryanne Akinyi").
+
+Right: A status "pill" or "badge" with rounded corners.
+
+If "On Delivery": Light blue background with blue text. It should display the number of stops (e.g., "3 Stops").
+
+If "Available": Light green background with green text. It should display "Available".
+
+Bottom Row:
+
+A short description in a smaller, muted font.
+
+If "On Delivery": Display the total number of packages (e.g., "5 Total Packages").
+
+If "Available": Display the text "Ready for assignment".
+
+5. Main Map View
+This is the primary component of the dashboard.
+
+Content: A map interface (e.g., OpenStreetMap style) centered on Nairobi.
+
+Controls: Standard map zoom in/out controls in the bottom-right corner.
+
+Markers: The map is populated with custom markers representing each agent.
+
+6. Map Marker & Popup Components
+Marker Style:
+
+Circular icons with a prominent white border and a drop shadow.
+
+If "On Delivery": A blue circle containing a white number that indicates the total number of stops.
+
+If "Available": A green circle containing a white "user" or "person" icon.
+
+Popup Style (on click):
+
+A clean, modern popup with rounded corners that appears when a marker is clicked.
+
+Popup for "On Delivery" Agent:
+
+Agent Name: Large, bold font at the top.
+
+Summary: A line of text below the name showing [X] Stops • [Y] Total Packages.
+
+Separator: A thin horizontal line.
+
+Invoice List: A list of all deliveries. Each list item contains:
+
+Left side: Invoice Number (bold) on top, Customer Name below it.
+
+Right side: A "Track It" link in blue text.
+
+Popup for "Available" Agent:
+
+Agent Name: Large, bold font at the top.
+
+Status Text: A line below reading "Available for new tasks" in a bold, green font.
+
+7. Key Interactions
+Filtering: Clicking a filter in the header (e.g., "Available") instantly updates both the side panel list and the markers on the map to show only the relevant agents.
+
+List-to-Map Sync:
+
+Clicking an Agent Card in the side panel should cause the map to pan and zoom to that agent's marker and automatically open its popup.
+
+Hovering the mouse over an Agent Card should add a visual highlight (e.g., a glowing ring) to the corresponding marker on the map.
+
+Map-to-List Sync (Optional but preferred): As the user pans and zooms the map, the "Agents in View" list in the side panel should update to show only the agents currently visible within the map's boundaries.
